@@ -95,10 +95,10 @@ document.addEventListener('click', (event) => {
 				showMessage('Account does not exist', 'signInMessage');
 			}
 		})
-})
+});
 
 
-
+/*
 const addCourse = document.getElementById('submitNewCourse');
 document.addEventListener('click', (event) => {
 	event.preventDefault();
@@ -131,6 +131,6 @@ document.addEventListener('click', (event) => {
 			})
 			.catch((error) => {
 				console.error("Error writing document", error);
-			});
-});
+			}); 
+}); */
 

@@ -1,0 +1,70 @@
+body {
+	font-family: Arial, sans-serif;
+	background-color: #f0f0f0;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	padding: 10px 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+	height: 150px;
+	margin-left: 10px;
+}
+
+nav ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+	gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 10px 15px;
+}
+
+nav a:hover {
+    color: #007BFF;
+}
+
+.account-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+	margin-right: 10px;
+}
+
+.account-btn:hover {
+    background-color: #0056b3;
+}
+
+.announcement {
+	display: flex;
+	justify-content: center;
+	margin-top: 40px;
+	margin-left: 30%;
+	margin-right: 30%;
+	max-height: 500px;
+	background-color: white;
+	color: #007BFF;
+	width: 40%;
+	border-radius: 5px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

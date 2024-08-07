@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="firebase.css">
+    <script type="module" src="firebase-auth.js"></script>
+</head>
+<body>
+    <header>
+        <img src="images/Logo.png" alt="Logo" class="logo">
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Home</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="account-btn">Account</button>
+    </header>
+    <div class="container">
+        <h2>Register</h2>
+        <form id="registerForm" action="/register" method="POST">
+            <div id="signUpMessage" class="messageDiv" style="display:none"></div>
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required placeholder="Enter your first name">
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required placeholder="Enter your last name">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email">
+            <label for="confirm_email">Confirm Email:</label>
+            <input type="email" id="confirm_email" name="confirm_email" required placeholder="Confirm your email">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required placeholder="Enter your password">
+            <label for="confirm_password">Confirm Password:</label>
+            <input type="password" id="confirm_password" name="confirm_password" required placeholder="Confirm your password">
+            <input type="submit" value="Register" id="createAccount">
+        </form>
+        <a href="login.html" class="back-to-login">Back to Login</a>
+    </div>
+    <footer class="course-navigation">
+        <!-- Removed course links -->
+    </footer>
+    <script src="register.js"></script>
+</body>
+</html>
+
+

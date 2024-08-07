@@ -1,0 +1,142 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F0F0F0;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.logo {
+    height: 150px;
+    margin-left: 10px;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 10px 15px;
+}
+nav a:hover {
+    color: #007BFF;
+}
+.account-btn {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.account-btn:hover {
+    background-color: #0056B3;
+}
+.course-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 75px;
+    text-align: center;
+    align-items: center;
+    margin-top: 40px;
+    width: 82%;
+    margin-right: auto;
+    margin-left: auto;
+    border: 1px solid #333;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    text-decoration-line: none;
+    color:#333;
+    background-color:white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.course-navigation a {
+    text-decoration: none;
+    color:#333;
+}
+.course-navigation a:hover {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.courses-container {
+    width: 70%;
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: Arial, sans-serif;
+}
+
+.course-details {
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #02060a;
+    border-radius: 10px;
+    padding: 1em;
+    background-color: #2043e0;
+    margin: 0;
+    height: 80px;
+    color: #000000;
+    font-family: Arial, sans-serif;
+}
+
+.course-description {
+    border: 1px solid #02060a;
+    margin: 1em 0;
+    padding: 1em;
+    text-align: center;
+    background-color: aliceblue;
+    flex: 1;
+}
+
+.upload-container {
+    width: 20%;
+    box-sizing: border-box;
+    margin-left: 2%;
+    height: 80px;
+    font-size: 1.5rem;
+    font-family: Arial, sans-serif;
+}
+
+.cert-upload {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aliceblue;
+    border: 1px solid #02060a;
+    padding: 1em;
+    text-align: center;
+    border-radius: 10px;
+    height: 70px;
+}
+
+.pair-container {
+    display: flex;
+    flex-direction: row; 
+    align-items: stretch; 
+    margin-bottom: 1em;
+    width: 75%;
+    box-sizing: border-box;
+}

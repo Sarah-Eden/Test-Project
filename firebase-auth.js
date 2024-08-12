@@ -98,7 +98,8 @@ document.addEventListener('click', (event) => {
 });
 
 
-/*
+/* FUNCTION DOES NOT WORK! I am hoping it is because the log in function above is not working, however this function
+   is also not working in the other test folder. I will continue to look for a solution. (Eden) */
 const addCourse = document.getElementById('submitNewCourse');
 document.addEventListener('click', (event) => {
 	event.preventDefault();
@@ -132,5 +133,5 @@ document.addEventListener('click', (event) => {
 			.catch((error) => {
 				console.error("Error writing document", error);
 			}); 
-}); */
+}); 
 

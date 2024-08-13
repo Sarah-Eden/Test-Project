@@ -70,29 +70,34 @@ signUp.addEventListener('click', (event) => {
 		})
 });
 
-// Function that allows a registered user to log in
 const signIn = document.getElementById('submitSignIn');
 signIn.addEventListener('click', (event) => {
 	event.preventDefault();
 	const email = document.getElementById('email').value;
 	const password = document.getElementById('password').value;
-	const auth = getAuth();
-	//setPersistence(auth, browserSessionPersistence)
-
-	signInWithEmailAndPassword(auth, email, password)
-		.then((userCredential) => {
-			showMessage('login successful', 'signInMessage');
-			const user = userCredential.user;
-			localStorage.setItem('loggedInUserId', user.uid);
-			window.location.href='AddNewCourse.html';
+	
+	setPersistence(auth, browserSessionPersistence) 
+		.then(() => {
+			signInWithEmailAndPassword(auth, email, password)
+				.then((userCredential) => {
+					showMessage('login successful', 'signInMessage');
+					const user = userCredential.user;
+					localStorage.setItem('loggedInUserId', user.uid);  // tracks user log in state
+					window.location.href='AddNewCourse.html';
+				})
+				.catch((error) => {
+					const errorCode = error.code;
+					if(errorCode == 'auth/invalid-credential') {
+						showMessage('Incorrect email or password', 'signInMessage');
+					}
+					else {
+						showMessage('Account does not exist', 'signInMessage');
+					}
+				});
 		})
 		.catch((error) => {
 			const errorCode = error.code;
-			if(errorCode =='auth/invalid-credential') {
-				showMessage('Incorrect email or password', 'signInMessage');
-			}
-			else {
-				showMessage('Account does not exist', 'signInMessage');
-			}
-		})
+			const errorMessage = error.message;
+			showMessage('Unable to set persistence', 'signInMessage');
+		});
 });

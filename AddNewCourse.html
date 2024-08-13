@@ -1,14 +1,12 @@
 <!DOCTYPE html>
-
 <html lang="en">
 	<head>
-		<meta charset="UTF-8">
-		<meta name = "viewport" content="width-device-width, initial-scale=1.0">
-		<title>Current Courses</title>
+		<meta charset = "UTF-8">
+		<meta name = "viewport" content = "width=device-width, initial-scale=1.0">
+		<title>Add New Course</title>
 		<link rel="stylesheet" href="AddNewCourse.css">
-		<script src="firebase-auth.js"></script>
+		<script type="module" src="AddNewCourse.js"></script>
 	</head>
-
 	<body>
 		<header>
 			<img src="Logo.png" alt="Logo" class="logo">
@@ -19,30 +17,29 @@
 					<li><a href="reports.html">Reports</a></li>
 				</ul>
 			</nav>
-			<button class="account-btn" id="account-btn">My Account</button>
+			<button class="account-btn" id="logout">Logout: <span id="loggedUserFirstName"></span></button>
 		</header>
 
-		<section div class = "course-navigation">
-			<div style="text-decoration-line: underline;"><b>Current Courses</b></div>
+		<div class="course-navigation">
+			<div><a href="CurrentCourses.html">Current Courses</a></div>
 			<div><a href="Completed Courses.html">Completed Courses</a></div>
-			<div><a href="LINK NEEDED">Add A New Course</a></div>
-		</section>
+			<div style="text-decoration-line: undereline;"><b>Add A New Course</b></div>
+		</div>
 
-		<section class = "form-container">
-			<form id="newCourse" action="" method="post">
+		<div class="container" id="addCourse">
+			<form method="post" action="">
 				<input type="text" id="courseName" name="courseName" placeholder="Course Name" required>
 				<input type="text" id="websiteUrl" name="websiteUrl" placeholder="Course URL">
 				<input type="text" id="certificateTrack" name="certificateTrack" placeholder="Certificate Track">
 				<textarea style="resize: none" id="courseDetails" name="courseDetails" placeholder="Course Details / Notes"></textarea>
 				<input type="checkbox"  id="currentlyEnrolled" name="currentlyEnrolled">
 				<label for="currentlyEnrolled"> Currently Enrolled</label>
-				<input class="delete-btn" type="submit" value="Delete Course" id="deleteCourse">
-				<input class="submit-btn" type="submit" value="Save Course Details" id="submitNewCourse"><br>
 				<input type="checkbox" id="completed" name="completed">
 				<label for="completed"> Completed on: </label>
 				<input type="date" id="completedDate" name="completedDate" placeholder="Date">
+				<button class="delete-btn" id="deleteCourse">Delete Course</button>
+				<button class="submit-btn" id="submitNewCourse">Save Course</button>
 			</form>
-		</section>
-		
+		</div>
 	</body>
 </html>

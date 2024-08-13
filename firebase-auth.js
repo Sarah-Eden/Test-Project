@@ -72,7 +72,7 @@ signUp.addEventListener('click', (event) => {
 
 // Function that allows a registered user to log in
 const signIn = document.getElementById('submitSignIn');
-document.addEventListener('click', (event) => {
+signIn.addEventListener('click', (event) => {
 	event.preventDefault();
 	const email = document.getElementById('email').value;
 	const password = document.getElementById('password').value;
@@ -96,42 +96,3 @@ document.addEventListener('click', (event) => {
 			}
 		})
 });
-
-
-/* FUNCTION DOES NOT WORK! I am hoping it is because the log in function above is not working, however this function
-   is also not working in the other test folder. I will continue to look for a solution. (Eden) */
-const addCourse = document.getElementById('submitNewCourse');
-document.addEventListener('click', (event) => {
-	event.preventDefault();
-	const courseName = document.getElementById('courseName').value;
-	const courseURL = document.getElementById('websiteUrl').value;
-	const certificateTrack = document.getElementById('certificateTrack').value;
-	const courseDetails = document.getElementById('courseDetails').value;
-	const currentlyEnrolled = document.getElementById('currentlyEnrolled').value;
-	const completedCourse = document.getElementById('completed').value;
-	const dateCompleted = document.getElementById('completedDate').value;
-
-	const auth = getAuth();
-	const user = firebase.auth().currentUser;
-	const db = getFirestore();
-
-	const courseData = {
-		Name: courseName,
-		Website: courseURL,
-		Track: certificateTrack,
-		Details: courseDetails,
-		Current: currentlyEnrolled,
-		Completed: completedCourse,
-		dateCompleted: dateCompleted
-	}
-
-	const docRef = doc(db, "courses", user.uid);
-		setDoc(docRef, courseData)
-			then(() => {
-				window.location.href = "CompletedCourses.html";
-			})
-			.catch((error) => {
-				console.error("Error writing document", error);
-			}); 
-}); 
-
